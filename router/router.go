@@ -7,11 +7,7 @@ func Initialize() {
 	//Inicializa o route utilizando as configurações Default do gin
 	router := gin.Default()
 	//Definindo uma rota
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	initializeRoutes(router)
 	//Rodando a API
 	router.Run(":8081")
 }
